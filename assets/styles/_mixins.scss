@@ -1,0 +1,102 @@
+// mixins for fonts
+@mixin base-heading {
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin Display {
+  @include base-heading;
+  font-size: 56px;
+  line-height: 114.286%;
+  letter-spacing: -2px;
+}
+
+@mixin H1 {
+  @include base-heading;
+  font-size: 48px;
+  line-height: 133.333%;
+  letter-spacing: -2px;
+}
+
+@mixin H2 {
+  @include base-heading;
+  font-size: 36px;
+  line-height: 133.333%;
+  letter-spacing: -2px;
+}
+
+@mixin H3 {
+  @include base-heading;
+  font-size: 28px;
+  line-height: 128.57%;
+  letter-spacing: -1px;
+}
+
+@mixin H4 {
+  @include base-heading;
+  font-size: 24px;
+  line-height: 133.333%;
+}
+
+@mixin H5 {
+  @include H1;
+  font-size: 20px;
+  line-height: 160%;
+}
+
+@mixin H6 {
+  @include H1;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+@mixin base-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin Body1 {
+  @include base-text;
+  font-size: 16px;
+  line-height: 175%;
+}
+
+@mixin Body2 {
+  @include base-text;
+  font-size: 14px;
+  line-height: 142.857%;
+}
+
+@mixin Label {
+  @include base-text;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 142.857%;
+}
+
+@mixin cap-base {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  line-height: 125%;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+@mixin cap01 {
+  @include cap-base;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@mixin cap03 {
+  @include cap-base;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@mixin cap03-Bold {
+  @include cap03-900;
+  font-weight: 900;
+}
