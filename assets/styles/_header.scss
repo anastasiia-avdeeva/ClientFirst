@@ -1,0 +1,16 @@
+.header {
+  background-color: $black;
+  color: $white;
+
+  &__first-line {
+    padding: 12px 80px 12px 83px;
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    align-items: center;
+    gap: 32px;
+  }
+}
+
+.hamburger-menu {
+  display: none;
+}

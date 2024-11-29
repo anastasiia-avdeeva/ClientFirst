@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <!-- Подключение Google Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,10 +15,67 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <title>Feensweet | main</title>
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <section class="header__first-line">
+        <div class="logo">
+          <a href="#" class="logo__link">
+            <img src="./assets/icons/logo.svg" alt="logo" class="logo__img" />
+          </a>
+        </div>
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__list-item">
+              <a href="#" class="nav__list-link">Home</a>
+            </li>
+            <li class="nav__list-item">
+              <a href="#" class="nav__list-link">Blog</a>
+            </li>
+            <li class="nav__list-item">
+              <a href="#" class="nav__list-link">About us</a>
+            </li>
+            <li class="nav__list-item">
+              <a href="#" class="nav__list-link">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="btn btn--white">Subscribe</button>
+        <div class="hamburger-menu">
+          <button class="hamburger-menu__btn">
+            <span class="hamburger-menu__btn-open material-symbols-outlined"
+              >menu</span
+            >
+            <span class="hamburger-menu__btn-close material-symbols-outlined"
+              >close</span
+            >
+          </button>
+          <nav class="hamburger-menu__nav">
+            <ul class="hamburger-menu__menu">
+              <li class="hamburger-menu__item">
+                <a href="#" class="nav__list-link">Home</a>
+              </li>
+              <li class="hamburger-menu__item">
+                <a href="#" class="nav__list-link">Blog</a>
+              </li>
+              <li class="hamburger-menu__item">
+                <a href="#" class="nav__list-link">About us</a>
+              </li>
+              <li class="hamburger-menu__item">
+                <a href="#" class="nav__list-link">Contact us</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="btn btn--white">Subscribe</button>
+        </div>
+      </section>
+    </header>
     <main class="main"></main>
     <footer class="footer"></footer>
   </body>
