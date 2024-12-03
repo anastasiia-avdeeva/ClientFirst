@@ -64,7 +64,7 @@ h6 {
 
 .btn {
   padding: 16px 48px;
-  min-width: 179px;
+  width: 179px;
   border: none;
   font-family: "Sen", sans-serif;
   font-weight: 700;
@@ -85,14 +85,8 @@ h6 {
   background-color: #edc14a;
 }
 
-span.material-symbols-rounded {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 60;
-  font-size: 60px;
-  font-weight: 400;
-  color: white;
-}
-
 .header {
+  position: relative;
   background-color: #232536;
   color: #fff;
 }
@@ -100,19 +94,43 @@ span.material-symbols-rounded {
   padding: 12px 80px 12px 83px;
   display: grid;
   grid-template-columns: min-content 1fr min-content;
-  grid-template-rows: 1fr 1fr;
   align-items: center;
   gap: 32px;
 }
 
+span.material-symbols-rounded {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 60;
+  font-size: 40px;
+  font-weight: 400;
+  color: white;
+}
+
+.hamburger-menu {
+  display: none;
+}
 .hamburger-menu__btn {
+  position: absolute;
+  top: 12px;
+  right: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 .hamburger-menu__content {
+  padding: 40px 20px;
+  width: 230px;
+  position: absolute;
+  top: 45px;
+  right: 0px;
+  transform: translateY(-140%);
+  transition: transform 0.2s;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  background-color: #232536;
+}
+.hamburger-menu__content--show {
+  transform: translateY(0);
 }
 .hamburger-menu__nav {
   font-family: "Inter", sans-serif;
@@ -125,4 +143,15 @@ span.material-symbols-rounded {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  text-align: center;
+}
+.hamburger-menu__menu-item:hover {
+  text-decoration: underline;
+}
+.hamburger-menu__content-btn {
+  margin: 0 auto;
+}
+
+span.hamburger-menu__close-icon {
+  display: none;
 }

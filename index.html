@@ -49,38 +49,77 @@
         <button class="btn btn--white">Subscribe</button>
         <div class="hamburger-menu">
           <button class="hamburger-menu__btn">
-            <span
-              class="hamburger-menu__btn-icon hamburger-menu__btn-open material-symbols-rounded"
+            <span class="hamburger-menu__menu-icon material-symbols-rounded"
               >menu</span
             >
-            <span
-              class="hamburger-menu__btn-icon hamburger-menu__btn-close material-symbols-rounded"
+            <span class="hamburger-menu__close-icon material-symbols-rounded"
               >close</span
             >
           </button>
           <div class="hamburger-menu__content">
             <nav class="hamburger-menu__nav">
               <ul class="hamburger-menu__menu">
-                <li class="hamburger-menu__menu-item">
+                <li
+                  class="hamburger-menu__menu-item hamburger-menu__content-item"
+                >
                   <a href="#" class="hamburger-menu__menu-link">Home</a>
                 </li>
-                <li class="hamburger-menu__menu-item">
+                <li
+                  class="hamburger-menu__menu-item hamburger-menu__content-item"
+                >
                   <a href="#" class="hamburger-menu__menu-link">Blog</a>
                 </li>
-                <li class="hamburger-menu__menu-item">
+                <li
+                  class="hamburger-menu__menu-item hamburger-menu__content-item"
+                >
                   <a href="#" class="hamburger-menu__menu-link">About us</a>
                 </li>
-                <li class="hamburger-menu__menu-item">
+                <li
+                  class="hamburger-menu__menu-item hamburger-menu__content-item"
+                >
                   <a href="#" class="hamburger-menu__menu-link">Contact us</a>
                 </li>
               </ul>
             </nav>
-            <button class="btn btn--white">Subscribe</button>
+            <button
+              class="btn btn--white hamburger-menu__content-item hamburger-menu__content-btn"
+            >
+              Subscribe
+            </button>
           </div>
         </div>
       </section>
     </header>
     <main class="main"></main>
     <footer class="footer"></footer>
+    <script>
+      const content = document.querySelector(".hamburger-menu__content");
+      const contentItems = document.querySelectorAll(
+        ".hamburger-menu__content-item"
+      );
+      const btn = document.querySelector(".hamburger-menu__btn");
+      const closeIcon = document.querySelector(
+        "span.hamburger-menu__close-icon"
+      );
+      const menuIcon = document.querySelector("span.hamburger-menu__menu-icon");
+
+      function toggleMenu() {
+        if (content.classList.contains("hamburger-menu__content--show")) {
+          content.classList.remove("hamburger-menu__content--show");
+          closeIcon.style.display = "none";
+          menuIcon.style.display = "block";
+        } else {
+          content.classList.add("hamburger-menu__content--show");
+          closeIcon.style.display = "block";
+          menuIcon.style.display = "none";
+        }
+      }
+
+      btn.addEventListener("click", toggleMenu);
+
+      contentItems.forEach(function (contentItem) {
+        contentItem.addEventListener("click", toggleMenu);
+      });
+    </script>
   </body>
 </html>
