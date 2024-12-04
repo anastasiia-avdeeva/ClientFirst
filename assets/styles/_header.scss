@@ -1,13 +1,95 @@
 .header {
   position: relative;
   background-color: $black;
-  color: $white;
+  //   color: $white;
 
   &__first-line {
+    min-height: 80px;
     padding: 12px 80px 12px 83px;
     display: grid;
     grid-template-columns: min-content 1fr min-content;
     align-items: center;
     gap: 32px;
+    color: $white;
+  }
+}
+
+.hamburger-menu {
+  display: none;
+  &__btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    // right: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__content {
+    padding: 20px 20px;
+    width: 230px;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    transform: translateY(-140%);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: $black;
+  }
+
+  &__content--show {
+    transform: translateY(0);
+  }
+
+  &__nav {
+    @include Body1;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+
+  &__menu-item:hover {
+    text-decoration: underline;
+  }
+
+  &__content-btn {
+    margin: 0 auto;
+  }
+}
+
+span.hamburger-menu__close-icon {
+  display: none;
+}
+
+@include sm-laptops {
+  .header {
+    &__first-line {
+      padding: 12px 40px 12px 43px;
+    }
+  }
+}
+
+@include tablets {
+  .header {
+    &__first-line {
+      padding: 12px 20px;
+      grid-template-columns: min-content 1fr;
+    }
+
+    &__nav,
+    &__btn {
+      display: none;
+    }
+  }
+
+  .hamburger-menu {
+    display: block;
   }
 }

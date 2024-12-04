@@ -85,19 +85,6 @@ h6 {
   background-color: #edc14a;
 }
 
-.header {
-  position: relative;
-  background-color: #232536;
-  color: #fff;
-}
-.header__first-line {
-  padding: 12px 80px 12px 83px;
-  display: grid;
-  grid-template-columns: min-content 1fr min-content;
-  align-items: center;
-  gap: 32px;
-}
-
 span.material-symbols-rounded {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 60;
   font-size: 40px;
@@ -105,23 +92,37 @@ span.material-symbols-rounded {
   color: white;
 }
 
+.header {
+  position: relative;
+  background-color: #232536;
+}
+.header__first-line {
+  min-height: 80px;
+  padding: 12px 80px 12px 83px;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  align-items: center;
+  gap: 32px;
+  color: #fff;
+}
+
 .hamburger-menu {
   display: none;
 }
 .hamburger-menu__btn {
   position: absolute;
-  top: 12px;
-  right: 0;
+  top: 20px;
+  right: 20px;
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
 .hamburger-menu__content {
-  padding: 40px 20px;
+  padding: 20px 20px;
   width: 230px;
   position: absolute;
-  top: 45px;
-  right: 0px;
+  top: 70px;
+  right: 0;
   transform: translateY(-140%);
   transition: transform 0.2s;
   display: flex;
@@ -154,4 +155,22 @@ span.material-symbols-rounded {
 
 span.hamburger-menu__close-icon {
   display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .header__first-line {
+    padding: 12px 40px 12px 43px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__first-line {
+    padding: 12px 20px;
+    grid-template-columns: min-content 1fr;
+  }
+  .header__nav, .header__btn {
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+  }
 }
