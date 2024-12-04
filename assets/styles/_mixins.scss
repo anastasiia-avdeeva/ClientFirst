@@ -103,6 +103,6 @@
 }
 
 @mixin cap03-Bold {
-  @include cap03-900;
+  @include cap03;
   font-weight: 900;
 }

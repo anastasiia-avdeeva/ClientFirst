@@ -67,7 +67,7 @@ h6 {
 // base styles fot buttons
 .btn {
   padding: 16px 48px;
-  width: 179px;
+  display: inline-block;
   border: none;
   @include btn-font;
 

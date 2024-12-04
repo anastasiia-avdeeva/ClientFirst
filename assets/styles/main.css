@@ -64,7 +64,7 @@ h6 {
 
 .btn {
   padding: 16px 48px;
-  width: 179px;
+  display: inline-block;
   border: none;
   font-family: "Sen", sans-serif;
   font-weight: 700;
@@ -173,4 +173,66 @@ span.hamburger-menu__close-icon {
   .hamburger-menu {
     display: block;
   }
+}
+.hero {
+  min-height: 720px;
+  margin-bottom: 128px;
+  padding: 128px 81px 192px;
+  background-image: radial-gradient(80.99% 71.93% at 74.58% 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%), url("../imgs/main-hero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero__content {
+  max-width: 803px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.hero__content *:not(.btn, .hero__meta-author) {
+  color: #fff;
+}
+.hero__cap {
+  margin-bottom: 8px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  line-height: 125%;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+}
+.hero__cap--bold {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  line-height: 125%;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  font-weight: 900;
+}
+.hero__title {
+  margin-bottom: 8px;
+  font-family: "Sen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 56px;
+  line-height: 114.286%;
+  letter-spacing: -2px;
+}
+.hero__meta, .hero__description {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 175%;
+}
+.hero__meta-author {
+  color: #ffd050;
+}
+.hero__description {
+  margin-bottom: 32px;
+  width: 75%;
 }
