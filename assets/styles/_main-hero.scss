@@ -10,11 +10,10 @@
     url("../imgs/main-hero.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left 10% center;
 
   &__content {
     max-width: 803px;
-    // width: 62.83%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -50,5 +49,37 @@
   &__description {
     margin-bottom: 32px;
     width: 75%;
+  }
+}
+
+@include tablets {
+  .hero {
+    min-height: auto;
+    padding: 50px 81px;
+  }
+}
+
+@include mobile {
+  .hero {
+    padding: 30px 20px;
+    background-position: left 30% bottom;
+
+    &__cap {
+      @include cap03-mobile;
+    }
+
+    &__cap--bold {
+      @include cap03-Bold-mobile;
+    }
+
+    &__title {
+      margin-bottom: 8px;
+      @include Display-mobile;
+    }
+
+    &__meta,
+    &__description {
+      @include Body1-mobile;
+    }
   }
 }

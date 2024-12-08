@@ -40,15 +40,17 @@
 }
 
 @mixin H5 {
-  @include H1;
+  @include base-heading;
   font-size: 20px;
   line-height: 160%;
+  letter-spacing: -2px;
 }
 
 @mixin H6 {
-  @include H1;
+  @include base-heading;
   font-size: 16px;
   line-height: 150%;
+  letter-spacing: -2px;
 }
 
 @mixin btn-font {
@@ -103,6 +105,99 @@
 }
 
 @mixin cap03-Bold {
-  @include cap03;
+  @include cap-base;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+// mixins for mobile fonts
+@mixin Display-mobile {
+  @include base-heading;
+  font-size: 40px;
+  line-height: 130%;
+  letter-spacing: -1px;
+}
+
+@mixin H1-mobile {
+  @include base-heading;
+  font-size: 32px;
+  line-height: 140%;
+  letter-spacing: -1px;
+}
+
+@mixin H2-mobile {
+  @include base-heading;
+  font-size: 28px;
+  line-height: 140%;
+  letter-spacing: -1px;
+}
+
+@mixin H3-mobile {
+  @include base-heading;
+  font-size: 24px;
+  line-height: 145%;
+  letter-spacing: -0.5px;
+}
+
+@mixin H4-mobile {
+  @include base-heading;
+  font-size: 20px;
+  line-height: 150%;
+}
+
+@mixin H5-mobile {
+  @include base-heading;
+  font-size: 18px;
+  line-height: 160%;
+  letter-spacing: -1px;
+}
+
+@mixin H6-mobile {
+  @include base-heading;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: -1px;
+}
+
+@mixin Body1-mobile {
+  @include base-text;
+  font-size: 14px;
+  line-height: 175%;
+}
+
+@mixin Body2-mobile {
+  @include base-text;
+  font-size: 12px;
+  line-height: 150%;
+}
+
+@mixin Label-mobile {
+  @include base-text;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+}
+
+@mixin btn-font-mobile {
+  @include base-heading;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+@mixin cap01-mobile {
+  @include cap-base;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@mixin cap03-mobile {
+  @include cap-base;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@mixin cap03-Bold-mobile {
+  @include cap-base;
+  font-size: 14px;
   font-weight: 900;
 }
