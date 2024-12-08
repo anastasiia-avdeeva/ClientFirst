@@ -93,6 +93,7 @@ span.material-symbols-rounded {
 }
 
 .header {
+  margin-bottom: 128px;
   position: relative;
   background-color: #232536;
 }
