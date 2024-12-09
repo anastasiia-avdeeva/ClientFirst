@@ -237,15 +237,19 @@ span.hamburger-menu__close-icon {
   width: 75%;
 }
 
+@media screen and (max-width: 1024px) {
+  .hero {
+    padding: 128px 40px 192px 43px;
+  }
+}
 @media screen and (max-width: 768px) {
   .hero {
     min-height: auto;
-    padding: 50px 81px;
+    padding: 50px 20px 50px 20px;
   }
 }
 @media screen and (max-width: 480px) {
   .hero {
-    padding: 30px 20px;
     background-position: left 30% bottom;
   }
   .hero__cap {
@@ -282,4 +286,8 @@ span.hamburger-menu__close-icon {
     font-size: 14px;
     line-height: 175%;
   }
+}
+.main {
+  margin-bottom: 128px;
+  padding: 0px 80px;
 }

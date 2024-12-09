@@ -52,16 +52,21 @@
   }
 }
 
+@include sm-laptops {
+  .hero {
+    padding: 128px 40px 192px 43px;
+  }
+}
+
 @include tablets {
   .hero {
     min-height: auto;
-    padding: 50px 81px;
+    padding: 50px 20px 50px 20px;
   }
 }
 
 @include mobile {
   .hero {
-    padding: 30px 20px;
     background-position: left 30% bottom;
 
     &__cap {
